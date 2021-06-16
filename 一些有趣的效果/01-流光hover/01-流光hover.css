@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(39, 39, 39);
+}
+
+button {
+  position: relative;
+  width: 20vw;
+  height: 4vw;
+  border: none;
+  font-size: 1.2vw;
+  font-family: Helvetica;
+  color: #fff;
+  border-radius: 50px;
+  background-image: linear-gradient(
+    to right,
+    #00f2fe,
+    #d4fc79,
+    #96e6a1,
+    #fed6e3,
+    #4facfe,
+    #fc00ff,
+    #f5576c,
+    #fee140,
+    #00f2fe
+  );
+  background-size: 400%;
+  z-index: 1;
+}
+
+/* 外发光圈 */
+button::before {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  left: -5px;
+  right: -5px;
+  border-radius: 50px;
+  background-image: linear-gradient(
+    to right,
+    #00f2fe,
+    #d4fc79,
+    #96e6a1,
+    #fed6e3,
+    #4facfe,
+    #fc00ff,
+    #f5576c,
+    #fee140,
+    #00f2fe
+  );
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(10px);
+}
+
+button:hover::before {
+  display: block;
+  animation: identifier 8s infinite;
+}
+
+button:hover {
+  animation: identifier 8s infinite;
+}
+
+/* 点击关闭外光圈，不需要可注释 */
+button:active::before {
+  display: none;
+}
+
+@keyframes identifier {
+  100% {
+    background-position: 300% 0;
+  }
+}
