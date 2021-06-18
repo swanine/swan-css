@@ -1,0 +1,54 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #000;
+}
+
+#toggler:checked + label .box {
+  background-color: cyan;
+}
+
+#toggler {
+  display: none;
+}
+
+.hamburger-container {
+  display: block;
+  margin: 0 auto;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 16px;
+}
+
+.hamburger-container span {
+  display: block;
+  height: 1px;
+  background-color: #fff;
+  position: relative;
+  transition: transform 0.3s ease-in-out 0.3s, top 0.3s ease-in-out 0.3s;
+
+  top: 0;
+}
+
+.hamburger-container span:nth-child(2) {
+  margin-top: 7px;
+}
+
+#toggler:checked + label .hamburger-container span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 4px;
+  transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+}
+
+#toggler:checked + label .hamburger-container span:nth-child(2) {
+  transform: rotate(-45deg);
+  top: -4px;
+  transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+}
+header {
+  background-color: #000;
+  margin: 100px auto;
+  width: 50px;
+  height: 44px;
+}
