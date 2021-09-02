@@ -1,0 +1,68 @@
+body{
+  padding: 0;
+  margin: 0;
+  background-color: #edeeed;
+}
+.drops{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.drop{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: transparent;
+  border-radius: 43% 57% 63% 37% / 57% 46% 54% 43% ;
+  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, .05),
+              inset -10px -10px 15px rgba(255,255,255),
+                    15px 25px 10px rgba(0, 0, 0, .1),
+                    15px 20px 20px rgba(0, 0, 0, .05);
+  animation: move 4s linear infinite; 
+}
+.drop::before{
+  content: '';
+  position: absolute;
+  top: 22px;
+  left: 35px;
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 70% 30% 71% 29% / 53% 33% 67% 47%;
+}
+.drop::after{
+  content: '';
+  position: absolute;
+  top: 22px;
+  left: 65px;
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 39% 61% 70% 30% / 45% 63% 37% 55%;
+}
+.drop:nth-child(2){
+  transform: scale(.5) translate(-200px, 180px);
+  border-radius: 60% 40% 55% 45% / 62% 56% 44% 38% ;
+}
+.drop:nth-child(3){
+  transform: scale(.5) translate(280px, 10px);
+  border-radius: 35% 65% 43% 57% / 35% 39% 61% 65% ;
+}
+.drop:nth-child(4){
+  transform: scale(.35) translate(120px, -350px);
+  border-radius: 39% 61% 55% 45% / 62% 56% 44% 38% ;
+}
+
+@keyframes  move {
+  25% {
+      border-radius:36% 64% 52% 48% / 42% 48% 52% 58%  ;
+  }
+  50% {
+      border-radius:37% 63% 50% 50% / 53% 54% 46% 47%   ;
+  }
+  75%{
+      border-radius:36% 64% 49% 51% / 42% 47% 53% 58%  ;
+  }
+}
