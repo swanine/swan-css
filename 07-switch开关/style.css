@@ -1,0 +1,41 @@
+.dark {
+  background-color: rgb(48, 48, 48);
+}
+
+.switch {
+  display: block;
+  position: relative;
+  height: 200px;
+  width: 360px;
+  background-color: rgb(214, 214, 214);
+  border-radius: 150px;
+  margin: 50px auto;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.switch::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(135deg,
+      rgb(201, 224, 197) 0%,
+      rgb(255, 255, 255) 100%);
+
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+}
+
+#switch {
+  display: none;
+}
+
+#switch:checked+.switch {
+  background-color: rgb(0, 202, 0);
+}
+
+#switch:checked+.switch::before {
+  transform: translateX(160px);
+}
