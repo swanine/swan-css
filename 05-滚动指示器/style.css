@@ -1,0 +1,36 @@
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.indicator {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to right top, teal 50%, transparent 50%) no-repeat;
+  background-size: 100% calc(100% - 100vh);
+  pointer-events: none;
+  mix-blend-mode: darken;
+}
+
+.indicator::after {
+  content: "";
+  position: fixed;
+  z-index: 1;
+  top: 5px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+}
+
+.text {
+  width: 40vw;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  font-family: Helvetica;
+}
