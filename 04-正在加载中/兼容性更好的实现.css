@@ -1,0 +1,39 @@
+#loadBox {
+  width: 14rem;
+  height: 3rem;
+  background-color: rgb(214, 79, 79);
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+}
+
+span {
+  position: relative;
+  bottom: 58px;
+}
+
+.loading {
+  display: inline-block;
+  height: 1rem;
+  line-height: 1;
+  text-align: -0.25ex;
+  /* overflow: hidden; */
+}
+
+.loading::before {
+  display: block;
+  content: "...\A..\A.";
+  white-space: pre-wrap;
+  animation: load 2.5s infinite step-start both;
+}
+
+@keyframes load {
+  33% {
+    transform: translateY(-2em);
+  }
+
+  66% {
+    transform: translateY(-1em);
+  }
+}

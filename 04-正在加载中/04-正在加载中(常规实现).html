@@ -4,40 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./正在加载中.css">
     <title>Document</title>
   </head>
   <body>
     <div class="dot">正在加载中</div>
-    <style>
-      /*常规实现*/
-      .dot {
-        width: 14rem;
-        height: 3rem;
-        background-color: rgb(214, 79, 79);
-        font-size: 2rem;
-        color: #fff;
-        text-align: center;
-        border-radius: 10px;
-      }
-      .dot::before {
-        content: "...";
-        position: absolute;
-        left: 12rem;
-        animation: dot2 2.5s infinite step-start both;
-      }
-
-      .dot::after {
-        content: "...";
-        color: transparent;
-      }
-      @keyframes dot2 {
-        33% {
-          content: ".";
-        }
-        66% {
-          content: "..";
-        }
-      }
-    </style>
   </body>
 </html>

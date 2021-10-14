@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./兼容性更好的实现.css">
     <title>Document</title>
   </head>
   <body>
@@ -11,41 +12,5 @@
       <span class="">正在加载中</span>
       <div class="loading"></div>
     </div>
-    <style>
-      #loadBox {
-        width: 14rem;
-        height: 3rem;
-        background-color: rgb(214, 79, 79);
-        font-size: 2rem;
-        color: #fff;
-        text-align: center;
-        border-radius: 10px;
-      }
-      span {
-        position: relative;
-        bottom: 58px;
-      }
-      .loading {
-        display: inline-block;
-        height: 1rem;
-        line-height: 1;
-        text-align: -0.25ex;
-        /* overflow: hidden; */
-      }
-      .loading::before {
-        display: block;
-        content: "...\A..\A.";
-        white-space: pre-wrap;
-        animation: load 2.5s infinite step-start both;
-      }
-      @keyframes load {
-        33% {
-          transform: translateY(-2em);
-        }
-        66% {
-          transform: translateY(-1em);
-        }
-      }
-    </style>
   </body>
 </html>
